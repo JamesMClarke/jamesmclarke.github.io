@@ -2,12 +2,11 @@
 layout: post
 title: On the Security and Privacy of Visual Impairments and Assistive Technologies
 date: 2024-01-22 21:01:00
-description: this is what included images could look like
-tags: visual-impairment assistive-technologies cookie-notices
+description: An overview of the paper Invisible, Unreadable, and Inaudible Cookie Notices; An Evaluation of Cookie Notices for Users with Visual Impairments.
+tags: Visual-Impairment Assistive-Technologies Cookie-notices
 categories: info
-thumbnail: assets/img/9.jpg
+thumbnail: assets/img/sunburst_2.png
 --- 
-
 Read the full paper on ACM Transactions for Accessible Computing: [Invisible, Unreadable, and Inaudible Cookie Notices: An Evaluation of Cookie Notices for Users with Visual Impairments](https://dl.acm.org/doi/abs/10.1145/3641281)
 
 According to the Office of National Statistics in 2020, almost 11 million adults with disabilities recently used the Internet in the UK [1]. Visual impairment is a term used to describe any type of vision loss, this can range from partial vision loss to someone who cannot see at all [2], [3]. A 2016 GOV.UK survey of assistive technology users found that 29% used a screen reader to browse the Internet, while others used screen magnifiers, speech recognition or readability software [4].
