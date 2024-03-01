@@ -271,7 +271,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: ["Visual Impairment", "Assistive Technologies"] # these tags will be displayed on the front page of your blog
-display_categories: ["info"] # these categories will be displayed on the front page of your blog
+display_categories: ["info","experience"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
