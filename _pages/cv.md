@@ -1,11 +1,21 @@
 ---
-layout: cv
+layout: default
 permalink: /cv/
 title: CV
-nav: false
+nav: true
 nav_order: 5
-cv_pdf: example_pdf.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
-toc:
-  sidebar: left
+cv_pdf: CV.pdf
 ---
+
+<div class="cv-container">
+    <iframe src="{{ site.baseurl }}/assets/pdf/CV.pdf" type="application/pdf" width="100%" height="800px">
+        <p>It appears you don't have a PDF plugin for this browser. You can <a href="{{ site.baseurl }}/assets/pdf/CV.pdf">click here to download the PDF file.</a></p>
+    </iframe>
+</div>
+
+<style>
+.cv-container {
+    padding: 20px 0;
+    width: 100%;
+}
+</style>

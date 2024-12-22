@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: Teaching
 description: Here is a list of the courses I have taught and demonstrated for.  
-nav: true
+nav: false
 nav_order: 6
 ---
 ## Lecturing

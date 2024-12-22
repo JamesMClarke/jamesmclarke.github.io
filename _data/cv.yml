@@ -2,96 +2,128 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
-
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+      value: James Clarke
+    - name: Current Role
+      value: PhD Candidate at University of Surrey
+    - name: Contact
+      value: j.m.clarke@surrey.ac.uk, jamesmclarke.co.uk
+    - name: Social
+      value: LinkedIn - JamesMClarke
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Usable Security
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Investigating approaches to enhance the security of systems and information while prioritising a user-centric design.
+        - Research aims to make security more accessible and intuitive for end-users.
+    - title: Digital Accessibility
       items:
-        - Description 1.
-        - Description 2.
+        - Investigating creating inclusive digital environments for people with diverse abilities.
+        - Currently investigating issues for users with visual impairments.
+    - title: Security and Privacy
+      items:
+        - Investigating Security and Privacy in various environments.
+        - Working on projects looking at privacy and security online, on desktop computers, mobile, and IoT devices.
 
-- title: Other Interests
-  type: list
+- title: Education
+  type: time_table
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: PhD Computer Science
+      institution: University of Surrey and Durham University
+      year: 2022-present
+      description:
+        - Investigating the security and privacy of assistive technologies (ATs) for people with visual impairments.
+        - Focusing on potential vulnerabilities and privacy concerns associated with screen readers and browser extensions.
+        - title: Research Objectives
+          contents:
+            - Develop privacy-enhancing and human-centric platform
+            - Protect visually impaired users against various attack vectors
+    
+    - title: MSc Cyber Security
+      institution: Newcastle University
+      year: 2021-2022
+      description:
+        - Achieved Distinction
+        - Focus on Security & Reliance, Dependable Systems, Cybercrime and Cloud Computing
+        - Dissertation in Visual Impairments and Privacy-Enhancing Technologies
+    
+    - title: BSc (Hons) Computer Science
+      institution: York St John University
+      year: 2017-2020
+      description:
+        - Achieved First Class Honours
+        - Studied programming, maths, databases, networking, HCI, mobile application development, IoT and cyber security
+        - Dissertation focused on invasive advertising, tracking, and online privacy
+
+- title: Publications
+  type: time_table
+  contents:
+    - title: Invisible, Unreadable, and Inaudible Cookie Notices
+      institution: ACM Transactions on Accessible Computing
+      year: 2024
+      description:
+        - Evaluation of Cookie Notices for Users with Visual Impairments
+        - Analysis of 46 websites through system studies and user study with 100 participants
+        - Investigation of accessibility challenges in cookie notices
+    
+    - title: AXECC
+      year: Under Review
+      description:
+        - Framework to measure differential web tracking and accessibility risks
+        - Analysis of 21k real-world browser extensions
+        - Investigation of third-party tracking and accessibility impact
+
+- title: Teaching Experience
+  type: time_table
+  contents:
+    - title: Demonstrator
+      institution: University of Surrey
+      year: 2023-present
+      description:
+        - COMM047 Secure Systems and Applications
+        - COM3014 Advanced Challenges in Web Technologies
+        - COM3017/COM037 Information Security Management
+        - COM3030 Privacy Enhancing Technologies
+    
+    - title: Invited Lecturer
+      institution: Royal Holloway, University of London
+      year: 2024
+      description:
+        - Delivered lecture on Human Aspects of Information Security and Privacy
+        - Created and presented original material based on research paper
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - Poster Competition Finalist, Computer Science Research Center, University of Surrey
+        - Departmental Funding for Privacy Enhancing Technologies Symposium
+    - year: 2023
+      items:
+        - FOSAD Summer School Scholarship
+
+- title: Academic Service
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - Poster Presenter at Privacy Enhancing Technologies Symposium
+        - Supporting MSc Project Supervision at Royal Holloway
+    - year: 2023-2024
+      items:
+        - Sub-reviewer for International Journal of Human-Computer Interaction
+        - Sub-reviewer for STAST'23
+        - Presenter at CyberMi2
+
+- title: Other Experience
+  type: time_table
+  contents:
+    - title: Team Coach
+      institution: Next plc
+      year: 2018-2022
+      description:
+        - Progressed from Sales Assistant to Team Coach and Sales Consultant
+        - Worked in York and South Tyneside locations
+        - Provided team leadership and guidance in fast-paced retail environment
