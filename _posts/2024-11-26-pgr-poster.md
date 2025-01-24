@@ -6,7 +6,7 @@ description: I was in the top 8 in my departments PGR poster competition.
 tags: poster
 #categories: 
 --- 
-I was in the top 8 in my departments PGR poster competition, please see the poster bellow. 
+I was placed in the top 8 in my departments PGR poster competition, please see the poster bellow. 
 
 <div class="cv-container">
     <iframe src="/assets/pdf/PGR_Poster.pdf" type="application/pdf" width="100%" height="800px">
