@@ -22,4 +22,4 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a third-year PhD student at the University of Surrey, working on the security and privacy of accessible technologies for people with visual impairments.
+I am a third-year PhD student at the University of Surrey, researching the security and privacy of accessible technologies for people with visual impairments. My work includes a study on the accessibility of cookie notices on UK websites, highlighting widespread design issues that negatively affect user experience and privacy, along with recommendations to improve accessibility. I recently completed a large-scale analysis of browser extensions, uncovering extensive tracking behaviours and their impact on web accessibility, and I am currently investigating the security and privacy of screen readers and their add-ons. 
