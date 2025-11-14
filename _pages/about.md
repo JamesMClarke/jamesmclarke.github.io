@@ -9,7 +9,6 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Room 36BB02,</p>
     <p>Alan Turing Building</p>
     <p>University of Surrey</p>
     <p>Stag Hill Campus</p> 
