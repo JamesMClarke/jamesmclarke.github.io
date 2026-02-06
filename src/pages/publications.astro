@@ -1,0 +1,22 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import PublicationList from "../components/PublicationList.astro";
+import { getPublications } from "../utils/bib";
+import { getCitationCount } from "../utils/citations";
+
+const publications = getPublications();
+
+// Enrich with citation counts
+const enriched = await Promise.all(
+  publications.map(async (pub) => {
+    if (pub.doi) {
+      pub.citationCount = await getCitationCount(pub.doi);
+    }
+    return pub;
+  })
+);
+---
+
+<PageLayout title="Publications">
+  <PublicationList heading="Publications" publications={enriched} />
+</PageLayout>

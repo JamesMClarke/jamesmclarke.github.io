@@ -1,0 +1,33 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/Hero.astro';
+
+import PostList from '../components/PostList.astro';
+
+import { getSite } from '../utils/consts';
+import Social from '../components/Social.astro';
+
+const site = await getSite();
+---
+
+<PageLayout
+	title={site.author.name || 'Dasein'}
+>
+	<Hero
+		title={site.author.name || 'Dasein'}
+		description={site.author.bio || 'Welcome to my personal website.'}
+		role={site.author.role}
+		location={site.author.location}
+		organization={site.author.organization}
+		organizationUrl={site.author.organization_url}
+	/>
+	
+
+	<Social class="mt-8" />
+
+	<PostList
+		heading="Blog"
+		limit={3}
+		viewAllHref="/blog"
+	/>
+</PageLayout>

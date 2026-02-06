@@ -1,0 +1,104 @@
+---
+import type { Publication } from "../utils/bib";
+
+interface Props {
+  heading: string;
+  publications: Publication[];
+}
+
+const { heading, publications } = Astro.props;
+
+function formatAuthors(authors: string[]): string {
+  return authors.join(", ");
+}
+---
+
+<section>
+  <div class="max-w-[90rem] mx-auto px-8">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b py-8 border-base-200">
+      <div class="lg:sticky lg:top-24 lg:z-40 self-start">
+        <h2 class="text-sm 2xl:text-xl text-base-900 font-bold uppercase">
+          {heading}
+        </h2>
+      </div>
+
+      <div class="flex flex-col gap-12 lg:col-span-2">
+        {publications.map((pub) => (
+          <article class="flex flex-col gap-2">
+            <h3 class="text-sm 2xl:text-xl text-base-900 font-bold uppercase">
+              {pub.title}
+            </h3>
+
+            <p class="text-xs 2xl:text-lg text-base-600">
+              {formatAuthors(pub.authors)}
+            </p>
+
+            <div class="flex flex-wrap items-center gap-2 text-xs 2xl:text-lg text-base-600">
+              {pub.journal && <span>{pub.journal}</span>}
+              {pub.journal && <span>&middot;</span>}
+              <span>{pub.year}</span>
+              {pub.citationCount !== undefined && pub.citationCount > 0 && (
+                <>
+                  <span>&middot;</span>
+                  <span class="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium border border-base-300 rounded-full">
+                    {pub.citationCount} {pub.citationCount === 1 ? "citation" : "citations"}
+                  </span>
+                </>
+              )}
+            </div>
+
+            {pub.abstract && (
+              <details class="mt-1">
+                <summary class="text-xs 2xl:text-lg text-base-500 cursor-pointer hover:text-base-700 uppercase font-bold">
+                  Abstract
+                </summary>
+                <p class="mt-2 text-xs 2xl:text-lg text-base-600 leading-relaxed">
+                  {pub.abstract}
+                </p>
+              </details>
+            )}
+
+            <div class="flex flex-wrap gap-2 mt-1">
+              {pub.pdf && (
+                <a href={pub.pdf} target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center px-2 py-0.5 text-xs font-medium border border-base-300 rounded-full hover:bg-base-100 transition-colors">
+                  PDF
+                </a>
+              )}
+              {pub.doi && (
+                <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center px-2 py-0.5 text-xs font-medium border border-base-300 rounded-full hover:bg-base-100 transition-colors">
+                  DOI
+                </a>
+              )}
+              {pub.video && (
+                <a href={pub.video} target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center px-2 py-0.5 text-xs font-medium border border-base-300 rounded-full hover:bg-base-100 transition-colors">
+                  Video
+                </a>
+              )}
+              {pub.html && (
+                <a href={pub.html} target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center px-2 py-0.5 text-xs font-medium border border-base-300 rounded-full hover:bg-base-100 transition-colors">
+                  HTML
+                </a>
+              )}
+              {pub.poster && (
+                <a href={pub.poster} target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center px-2 py-0.5 text-xs font-medium border border-base-300 rounded-full hover:bg-base-100 transition-colors">
+                  Poster
+                </a>
+              )}
+              {pub.googleScholarId && (
+                <a href={`https://scholar.google.com/citations?view_op=view_citation&citation_for_view=${pub.googleScholarId}`} target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center px-2 py-0.5 text-xs font-medium border border-base-300 rounded-full hover:bg-base-100 transition-colors">
+                  Google Scholar
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

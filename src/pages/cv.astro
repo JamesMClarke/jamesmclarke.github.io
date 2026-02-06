@@ -1,0 +1,19 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionList from '../components/SectionList.astro';
+import { getCollection } from 'astro:content';
+
+const cvSections = await getCollection('cv');
+---
+
+<PageLayout
+	title="CV"
+	description="CV of James M. Clarke — PhD Candidate in Computer Science at the University of Surrey."
+>
+	{cvSections.map((section) => (
+		<SectionList
+			heading={section.data.heading}
+			items={section.data.items ?? []}
+		/>
+	))}
+</PageLayout>

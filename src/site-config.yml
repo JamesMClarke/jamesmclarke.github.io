@@ -1,0 +1,24 @@
+author:
+  name: James M. Clarke
+  role: PhD Candidate in Computer Science
+  bio: Security and privacy researcher specialising in assistive technologies and accessible systems.
+  location: Guildford, UK
+  organization: University of Surrey
+  organization_url: "https://www.surrey.ac.uk/"
+
+social:
+  - id: "x"
+    label: "X"
+    href: "https://x.com/James_M_Clarke"
+  - id: "github"
+    label: "GitHub"
+    href: "https://github.com/jamesmclarke"
+  - id: "linkedin"
+    label: "Linkedin"
+    href: "https://www.linkedin.com/in/james-morgan-clarke-6baa87180"
+  - id: "orcid"
+    label: "ORCID"
+    href: "https://orcid.org/0009-0002-5876-7207"
+  - id: "email"
+    label: "Email"
+    href: "mailto:james.m.clarke@surrey.ac.uk"
