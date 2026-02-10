@@ -3,25 +3,72 @@ import PageLayout from '../layouts/PageLayout.astro';
 import { withBase } from '../utils/slugify';
 ---
 
-<PageLayout title="Page not found" description="The page you’re looking for doesn’t exist.">
+<PageLayout title="Page not found" description="The page you're looking for doesn't exist.">
   <section class="content-shell py-12 md:py-16">
-    <div class="relative card overflow-hidden min-h-[80vh] w-full max-w-3xl mx-auto grid place-content-center gap-8 px-6 sm:px-10 py-14 md:py-16">
+    <div class="relative card overflow-hidden min-h-[70vh] w-full max-w-3xl mx-auto grid place-content-center gap-8 px-6 sm:px-10 py-14 md:py-16">
       <div class="max-w-3xl mx-auto flex flex-col pt-10 items-center gap-6">
-        <div class="relative mx-auto flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-muted">
-          <span class="inline-flex items-center gap-2 rounded-full border border-[color-mix(in_ oklab,_var(--color-ink)_16%,_transparent)] bg-[color-mix(in_ oklab,_var(--color-surface)_92%,_transparent)] px-3 py-1 uppercase tracking-[0.2em]">404</span>
-          <span class="text-muted">Lost in the grid</span>
+
+        <p class="not-found-code" aria-hidden="true">404</p>
+
+        <div class="relative mx-auto max-w-3xl space-y-4 text-center">
+          <h1 class="m-0 text-3xl sm:text-4xl font-semibold leading-tight text-ink">Page not found</h1>
+          <p class="m-0 text-muted max-w-2xl mx-auto">The page you're looking for doesn't exist or may have been moved.</p>
         </div>
 
-        <div class="relative mx-auto max-w-3xl space-y-5 text-center">
-          <h1 class="m-0 text-3xl sm:text-4xl font-semibold leading-tight text-ink">We couldn’t find that page.</h1>
-          <p class="m-0 text-muted max-w-2xl mx-auto">The link may be broken or the page might have moved. Pick a route below to keep moving.</p>
-        </div>
+        <button type="button" id="not-found-search-btn" class="not-found-search-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search the site</span>
+        </button>
 
-        <div class="relative flex flex-wrap justify-center gap-4 pt-2">
+        <div class="relative flex flex-wrap justify-center gap-3 pt-4">
           <a class="button primary" href={withBase('/')}>Back to home</a>
-          <a class="button secondary" href={withBase('/blog')}>View the blog</a>
+          <a class="button secondary" href={withBase('/blog')}>Blog</a>
+          <a class="button secondary" href={withBase('/publications')}>Publications</a>
+          <a class="button secondary" href={withBase('/about')}>About</a>
         </div>
       </div>
     </div>
   </section>
 </PageLayout>
+
+<script is:inline>
+  document.getElementById('not-found-search-btn')?.addEventListener('click', () => {
+    const searchToggle = document.getElementById('search-toggle');
+    if (searchToggle) searchToggle.click();
+  });
+</script>
+
+<style>
+  .not-found-code {
+    margin: 0;
+    font-size: clamp(5rem, 15vw, 9rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: color-mix(in oklab, var(--color-ink) 8%, transparent);
+    user-select: none;
+  }
+
+  .not-found-search-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 20rem;
+    padding: 0.7rem 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    background: color-mix(in oklab, var(--color-surface, #fff) 94%, transparent);
+    box-shadow: 0 2px 8px color-mix(in oklab, var(--color-ink, #111) 6%, transparent);
+    color: var(--color-muted, #999);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+  }
+
+  .not-found-search-trigger:hover {
+    border-color: color-mix(in oklab, var(--color-ink) 24%, transparent);
+    box-shadow: 0 4px 16px color-mix(in oklab, var(--color-ink, #111) 10%, transparent);
+    transform: translateY(-1px);
+  }
+</style>
